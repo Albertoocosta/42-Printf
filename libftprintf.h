@@ -6,10 +6,10 @@
 # include <stdarg.h>
 # include "./libft/libft.h"
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstrs_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-
+int	ft_putchr(char c);
+int	ft_putstri(char *str);
+int	ft_putnb(int n);
+int	ft_putnbrunsig(unsigned int nbr);
 int	ft_printf(const char *content, ...);
 
 #endif

@@ -1,18 +1,30 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c
+SRCS = ft_printf.c ft_putchr.c ft_putnb.c ft_putnbrunsig.c ft_putstri.c
 NAME = libftprintf.a
-LIBC = ar rcs
+LIBFT = ./libft
+AR = ar rcs
 RM = rm -f
 OBJS = $(SRCS:.c=.o)
-${NAME}: ${OBJS}
-	${LIBC}	${NAME} ${OBJS}
-%.o: %.cc
-	${CC}	${CFLAGS} -c $< -o $@
-all:	${NAME}
+
+all:	$(NAME)
+
+%.o: %.c
+	$(CC)	$(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	make -C (LIBFT)
+	cp	libft/libft.a
+	mv libft.a $(NAME)
+	$(AR)	$(NAME) $(OBJS)
 clean:
-	${RM}	${OBJS}
+	$(RM)	$(OBJS)
+	@make clean -C $(LIBFT)
+
 fclean: clean
-	${RM}	${NAME}
+	$(RM)	$(NAME)
+	@$(RM) $(LIBFT)/libft.a
+
 re: fclean all
+
 .PHONY : all clean fclean re
