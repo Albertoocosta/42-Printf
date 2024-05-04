@@ -6,7 +6,7 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:40:54 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/03 20:54:13 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/04 13:28:46 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_printf(const char *content, ...)
       {
          if (content[i + 1] == '%')
             result = ft_putchr('%');
-         else if (ft_strchr("scdipxX", content[i + 1]))
+         else if (ft_strchr("scdiupxX", content[i + 1]))
             result = checkArgs(content, va_args(args, void *));
       }
       i++;
