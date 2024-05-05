@@ -8,8 +8,8 @@
 
 int	ft_putchr(char c);
 int	ft_putstri(char *str);
-int	ft_putnb(int n);
-int	ft_putnbrunsig(unsigned int nbr);
+int	ft_putnb(long n);
+int	ft_putnbrunsig(unsigned long nbr);
 int	ft_printf(const char *content, ...);
 
 #endif

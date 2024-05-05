@@ -13,9 +13,8 @@ all:	$(NAME)
 	$(CC)	$(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	make -C (LIBFT)
-	cp	libft/libft.a
-	mv libft.a $(NAME)
+	make -C $(LIBFT)
+	cp	libft/libft.a $(NAME)
 	$(AR)	$(NAME) $(OBJS)
 clean:
 	$(RM)	$(OBJS)

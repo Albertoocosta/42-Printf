@@ -6,7 +6,7 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:32:08 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/03 19:36:15 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/05 15:44:21 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	ft_putstri(char *str)
 	if(str)
 		while (str[i])
 		{
-			write (1, &str[i], 1);
+			ft_putchar_fd(str[i], 1);
 			i++;
 		}
 	else
 		return (0);
-	return (1);
+	return (i);
 }

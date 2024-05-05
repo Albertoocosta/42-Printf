@@ -6,13 +6,14 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:40:54 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/04 13:28:46 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/05 19:39:36 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+#include <stdio.h>
 
-int   checkArgs(const char *content, void *arg)
+int   checkArgs(const char *content, va_list args)
 {
    int   i;
 
@@ -20,44 +21,51 @@ int   checkArgs(const char *content, void *arg)
    while (*content)
    {
       if (*content == 's')
-         i += ft_putstri((char *)arg);
+         i += ft_putstri(va_arg(args, char *));
       else if (*content == 'c')
-         i += ft_putchr((int)arg);
-      else if (*content == 'd' || content[i + 1] == 'i')
-         i += ft_putnb((int)arg);
+         i += ft_putchr(va_arg(args, int));
+      else if (*content == 'd' || *content == 'i')
+         i += ft_putnb(va_arg(args, int));
+      else if (*content == 'u')
+         i += ft_putnbrunsig(va_arg(args, unsigned int));
       else if (*content == 'X')
-         i += ft_putnb((int)arg);
+         i += ft_putnb(va_arg(args, int));
       else if (*content == 'x')
-         i += ft_putnb((int)arg); 
-      return (i);
+         i += ft_putnb(va_arg(args, int)); 
+      content++;
    }
+   return (i);
 }
 
 int	ft_printf(const char *content, ...)
 {
+   va_list  args;
 	int   i;
    int   result;
-   va_list  args;
    
    i = 0;
    result = 0;
    va_start(args, content);
-   while(content[i])
+   while(content[i] != 0)
    {
       if(content[i] == '%')
       {
          if (content[i + 1] == '%')
             result = ft_putchr('%');
          else if (ft_strchr("scdiupxX", content[i + 1]))
-            result = checkArgs(content, va_args(args, void *));
+         {
+            result = checkArgs(&content[i], args);
+         }
       }
       i++;
    }
    va_end(args);
    return (result);
 }
-
 int main()
 {
-   ft_printf("Teste aqui %s\n");
+   char *str = "teste string";
+   ft_printf("%s", str);
+   printf ("\n");
+   printf("%s", str);
 }
