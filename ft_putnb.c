@@ -6,11 +6,11 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:11:54 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/05 16:00:13 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/07 19:13:00 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnb(long nbr)
 {

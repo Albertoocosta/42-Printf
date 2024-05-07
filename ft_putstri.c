@@ -6,11 +6,11 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:32:08 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/05 15:44:21 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/07 19:52:48 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putstri(char *str)
 {

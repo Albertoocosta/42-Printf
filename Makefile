@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c ft_putchr.c ft_putnb.c ft_putnbrunsig.c ft_putstri.c
+SRCS = ft_printf.c ft_putchr.c ft_putnb.c ft_putnbrunsig.c ft_putstri.c ft_puthex.c ft_putptr.c
 NAME = libftprintf.a
 LIBFT = ./libft
 AR = ar rcs

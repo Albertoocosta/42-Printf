@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cda-fons <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:38:39 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/04/16 17:14:28 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/07 19:10:51 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if (ps1[i] != ps2[i])
 		{
 			result = ps1[i] - ps2[i];
-			if (result > 1)
-				return (1);
-			else if (result < 1)
-				return (-1);
 		}
 		i++;
 	}

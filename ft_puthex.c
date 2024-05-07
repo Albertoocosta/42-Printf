@@ -6,11 +6,11 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:02:35 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/07 17:52:29 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/07 19:40:55 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_puthex(int arg, char flag);
 
