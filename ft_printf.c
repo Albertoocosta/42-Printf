@@ -6,7 +6,7 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:40:54 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/05 19:39:36 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:55:41 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ int   checkArgs(const char *content, va_list args)
       else if (*content == 'u')
          i += ft_putnbrunsig(va_arg(args, unsigned int));
       else if (*content == 'X')
-         i += ft_putnb(va_arg(args, int));
+         i += ft_puthex((va_arg(args, int)), 'X');
       else if (*content == 'x')
-         i += ft_putnb(va_arg(args, int)); 
+         i += ft_puthex((va_arg(args, int)), 'x');
+      else if (*content == 'p')
+         i += ft_putptr(va_arg(args, int));
       content++;
    }
    return (i);
