@@ -6,15 +6,15 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:01:12 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/07 19:52:40 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:34:41 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbrunsig(unsigned long nbr);
+int	ft_putnbrunsig(unsigned int nbr);
 
-static void	print(unsigned long nbr)
+static void	print(unsigned int nbr)
 {
 	if(nbr > 9)
 		ft_putnbrunsig(nbr / 10);
@@ -26,7 +26,7 @@ static void	print(unsigned long nbr)
 	ft_putchar_fd((int)(nbr % 10) + '0', 1);
 }
 
-int	ft_putnbrunsig(unsigned long nbr)
+int	ft_putnbrunsig(unsigned int nbr)
 {
  	unsigned int	i;
 	
