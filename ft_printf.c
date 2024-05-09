@@ -6,7 +6,7 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:40:54 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/08 21:00:45 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/09 12:57:06 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,3 @@ int	ft_printf(const char *content, ...)
    va_end(args);
    return (result);
 }
-/* #include <stdio.h>
-#include <limits.h>
-int main()
-{
-   //char *s2 = "Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus.";
-
-   printf("%x\n", 0);
-   ft_printf("%x", 0);
-} */

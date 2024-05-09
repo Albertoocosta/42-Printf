@@ -11,7 +11,7 @@ int	ft_putstri(char *str);
 int	ft_putnb(long n);
 int	ft_putnbrunsig(unsigned int nbr);
 int	ft_putptr(void *arg);
-int	ft_puthex(unsigned int arg, char flag);
+int	ft_puthex(unsigned long arg, char flag);
 int	ft_printf(const char *content, ...);
 
 #endif
