@@ -6,7 +6,7 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:11:54 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/07 19:13:00 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/09 16:09:29 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_putnb(long nbr)
 {
-	int	i;
-	long nb;
-	
+	long	nb;
+	int		i;
+
 	i = 1;
 	nb = nbr;
 	if (nbr < 0 && nbr != -2147483648)

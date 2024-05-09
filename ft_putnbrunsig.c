@@ -6,7 +6,7 @@
 /*   By: cda-fons <cda-fons@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:01:12 by cda-fons          #+#    #+#             */
-/*   Updated: 2024/05/08 16:34:41 by cda-fons         ###   ########.fr       */
+/*   Updated: 2024/05/09 16:07:23 by cda-fons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_putnbrunsig(unsigned int nbr);
 
 static void	print(unsigned int nbr)
 {
-	if(nbr > 9)
+	if (nbr > 9)
 		ft_putnbrunsig(nbr / 10);
 	if (nbr < 10)
 	{
@@ -28,8 +28,8 @@ static void	print(unsigned int nbr)
 
 int	ft_putnbrunsig(unsigned int nbr)
 {
- 	unsigned int	i;
-	
+	unsigned int	i;
+
 	print(nbr);
 	i = 1;
 	while (nbr > 9)
